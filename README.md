@@ -8,11 +8,15 @@ Automatically save shsh2 blobs for signed iOS firmwares using [tsschecker](https
 
 ## Usage
 1. Place your device info in devices.ini
-  - [Find your device identifier](https://ipsw.me/device-finder)
-  - [Find your device ECID](https://www.theiphonewiki.com/wiki/ECID#Getting_the_ECID) (both hex and dec are accepted)
-  - Determine if your iOS device requires a board config. iOS devices with multiple available board configs will require you to manually specify a board config. Check [this list](https://www.theiphonewiki.com/wiki/Models) to see if your device is applicable.
-  - Put this information in devices.ini in the appropriate format (see below for formatting)
-2. Place the [tsschecker script](https://github.com/tihmstar/tsschecker/releases) for your OS in the same directory as autotss.py
+      - [Find your device identifier](https://ipsw.me/device-finder)
+      - [Find your device ECID](https://www.theiphonewiki.com/wiki/ECID#Getting_the_ECID) (both hex and dec are accepted)
+      - Determine if your iOS device requires a board config. iOS devices with multiple available board configs will require you to manually specify a board config. Check [this list](https://www.theiphonewiki.com/wiki/Models) to see if your device is applicable.
+      - Put this information in devices.ini in the appropriate format (see below for formatting)
+2. Unzip the latest [tsschecker](https://github.com/tihmstar/tsschecker/releases) release, and place the unzipped folder in the same directory as autotss.py
+	- Once the unzipped tsschecker folder is in the same directory as autotss.py, the binary for your operating system will be automatically selected
+	- Or you can manually provide a path to your tsschecker binary:
+      -   `autotss('/Users/codsane/tsschecker/tsschecker_macos')`
+      -   `python3 autotss.py -p /Users/codsane/tsschecker/tsschecker_macos`
 3. Run `python3 autotss.py`
 4. (Optional) Schedule autotss to run frequently to save blobs for firmwares as they are signed
 
@@ -32,6 +36,13 @@ ecid = A1032047B013A
 boardconfig = n69uap
 ```
 
+## Known Issues
+- iOS 11.2 Build 15C113
+    - This specific iOS 11.2 build doesn't like to work with tsschecker for some reason. tsschecker works fine with iOS 11.2 Build 15C114 so that build can be used instead.
+
+- Outdated version of tsschecker at tsschecker's repo
+    - The release at the tsschecker repo hasn't been updated in a while and might cause some issues. Instead, the latest version of tsschecker (>=247) can be found here: http://api.tihmstar.net/builds/tsschecker/tsschecker-latest.zip
+
 ## Requirements
 * python 3
 * cron (optional, but recommended for full automation)
@@ -40,6 +51,4 @@ boardconfig = n69uap
 * [tsschecker](https://github.com/tihmstar/tsschecker)
 
 ## To Do
-
-- [ ] Add support for Beta/OTA firmware versions
-- [ ] Automatically detect tsschecker script name depending on OS
+- [ ] Add support for Beta/OTA firmwares
