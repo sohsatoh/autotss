@@ -7,6 +7,7 @@ Automatically save shsh2 blobs for signed iOS firmwares using [tsschecker](https
 [@leftyfl1p](https://github.com/leftyfl1p) and I were curious to see if Apple ever accidentally signs firmwares that should no longer be signed ([they do](https://www.reddit.com/r/jailbreak/comments/7pmbwu/meta_apple_signing_fck_up_mega_thread/?utm_content=title&utm_medium=browse&utm_source=reddit&utm_name=jailbreak)). While tsschecker is great for this, a tool to automate the process did not yet exist.
 
 ## Usage
+(I highly recommend to use [encounter's tsschecker](https://github.com/encounter/tsschecker/releases)
 1. Place your device info in devices.ini
       - [Find your device identifier](https://ipsw.me/device-finder)
       - [Find your device ECID](https://www.theiphonewiki.com/wiki/ECID#Getting_the_ECID) (both hex and dec are accepted)
@@ -45,15 +46,12 @@ boardconfig = n69uap
 - iOS 11.2 Build 15C113
     - This specific iOS 11.2 build doesn't like to work with tsschecker for some reason. tsschecker works fine with iOS 11.2 Build 15C114 so that build can be used instead.
 
-- Outdated version of tsschecker at tsschecker's repo
-    - The release at the tsschecker repo hasn't been updated in a while and might cause some issues. Instead, the latest version of tsschecker (>=247) can be found here: http://api.tihmstar.net/builds/tsschecker/tsschecker-latest.zip
-
 ## Requirements
 * python 3
 * cron (optional, but recommended for full automation)
 * [requests](https://github.com/kennethreitz/requests)
 * [dataset](https://github.com/pudo/dataset)
-* [tsschecker](https://github.com/tihmstar/tsschecker)
+* [encounter's tsschecker](https://github.com/encounter/tsschecker/releases)
 
 ## To Do
 - [ ] Add support for Beta/OTA firmwares
