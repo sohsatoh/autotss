@@ -264,7 +264,7 @@ class autotss:
 					if scriptName == 'tsschecker_windows.exe':
 						print('Recent tsschecker builds have not included a Windows binary, you may need to build one yourself')
 
-					print('Get tsschecker here: http://api.tihmstar.net/builds/tsschecker/tsschecker-latest.zip')
+					print('Get tsschecker here: https://github.com/encounter/tsschecker/releases')
 					print('Unzip into the same folder as autotss')
 					sys.exit()
 
