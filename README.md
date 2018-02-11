@@ -7,7 +7,7 @@ Automatically save shsh2 blobs for signed iOS firmwares using [tsschecker](https
 [@leftyfl1p](https://github.com/leftyfl1p) and I were curious to see if Apple ever accidentally signs firmwares that should no longer be signed ([they do](https://www.reddit.com/r/jailbreak/comments/7pmbwu/meta_apple_signing_fck_up_mega_thread/?utm_content=title&utm_medium=browse&utm_source=reddit&utm_name=jailbreak)). While tsschecker is great for this, a tool to automate the process did not yet exist.
 
 ## Usage
-(I highly recommend to use [encounter's tsschecker](https://github.com/encounter/tsschecker/releases)
+I highly recommend to use [encounter's tsschecker](https://github.com/encounter/tsschecker/releases)
 1. Place your device info in devices.ini
       - [Find your device identifier](https://ipsw.me/device-finder)
       - [Find your device ECID](https://www.theiphonewiki.com/wiki/ECID#Getting_the_ECID) (both hex and dec are accepted)
