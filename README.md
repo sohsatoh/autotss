@@ -19,6 +19,7 @@ Automatically save shsh2 blobs for signed iOS firmwares using [tsschecker](https
       -   `python3 autotss.py -p /Users/codsane/tsschecker/tsschecker_macos`
 3. Run `python3 autotss.py`
 4. (Optional) Schedule autotss to run frequently to save blobs for firmwares as they are signed
+
 Example(You need to change directory.):
 ```
 45 * * * * cd ~/backup/shsh/autotss;python3 autotss.py -p /home/pi/backup/shsh/autotss/tsschecker_linux
