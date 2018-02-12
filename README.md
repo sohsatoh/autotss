@@ -3,7 +3,7 @@ Automatically save shsh2 blobs for signed iOS firmwares using [tsschecker](https
 
 # Notification
 I recommend to use [AutoTSSSaver](https://github.com/sohsatoh/AutoTSSSaver).
-I added some files to check tss sever automatically.
+I added some files to detect the change of tss server.
 
 ## Motivation
 >tsschecker is not only meant to be used to check signing status, but also to explore Apple's tss servers. By using all of its customization possibilities, __you might discover a combination of devices and iOS versions that is now getting signed but wasn't getting signed before.__ -[tihmstar (author of tsschecker)](https://github.com/tihmstar/tsschecker/blob/master/README.md#features)
